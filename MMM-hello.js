@@ -20,7 +20,7 @@ Module.register("MMM-hello",{
      notificationReceived(notification, payload, sender) {
        if(notification==="ALL_MODULES_STARTED"){
            Log.info("Sending Notification to Socket1");
-           this.sendSocketNotification("CONFIG", this.config)
+           this.sendSocketNotification("CONFIG", {"text" : this.config.text})
        }
      },
 
